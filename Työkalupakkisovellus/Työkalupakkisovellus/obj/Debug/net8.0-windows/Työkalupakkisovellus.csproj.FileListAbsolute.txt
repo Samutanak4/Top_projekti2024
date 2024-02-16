@@ -1,0 +1,17 @@
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Työkalupakkisovellus.exe
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Työkalupakkisovellus.deps.json
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Työkalupakkisovellus.runtimeconfig.json
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Työkalupakkisovellus.dll
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Työkalupakkisovellus.pdb
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.Form1.resources
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.csproj.GenerateResource.cache
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.AssemblyInfoInputs.cache
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.AssemblyInfo.cs
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.csproj.CoreCompileInputs.cache
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.sourcelink.json
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.dll
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\refint\Työkalupakkisovellus.dll
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.pdb
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.genruntimeconfig.cache
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\ref\Työkalupakkisovellus.dll

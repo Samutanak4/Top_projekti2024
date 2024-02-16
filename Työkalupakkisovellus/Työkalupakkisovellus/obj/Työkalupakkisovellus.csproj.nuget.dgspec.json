@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {}
+    "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {
+    "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
+        "projectUniqueName": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
         "projectName": "Työkalupakkisovellus",
-        "projectPath": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
-        "packagesPath": "C:\\Users\\Jesu16\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\obj\\",
+        "projectPath": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
+        "packagesPath": "C:\\Users\\ripas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jesu16\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ripas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
