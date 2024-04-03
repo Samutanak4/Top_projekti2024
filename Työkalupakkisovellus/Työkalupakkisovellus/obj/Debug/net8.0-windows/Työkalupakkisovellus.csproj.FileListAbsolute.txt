@@ -15,3 +15,4 @@ C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisove
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.pdb
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.genruntimeconfig.cache
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\ref\Työkalupakkisovellus.dll
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.csproj.AssemblyReference.cache

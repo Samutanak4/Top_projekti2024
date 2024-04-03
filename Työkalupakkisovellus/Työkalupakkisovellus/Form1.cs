@@ -12,6 +12,8 @@ namespace Työkalupakkisovellus
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
         private void lahetaVaraus_btn_Click(object sender, EventArgs e)

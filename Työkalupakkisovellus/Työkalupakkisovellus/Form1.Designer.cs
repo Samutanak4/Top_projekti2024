@@ -63,6 +63,7 @@
             // 
             // tabControl
             // 
+            tabControl.Appearance = TabAppearance.FlatButtons;
             tabControl.Controls.Add(tabPage1);
             tabControl.Controls.Add(tabPage2);
             tabControl.Controls.Add(tabPage3);
@@ -76,6 +77,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = Color.Gainsboro;
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(varausMuutaTietoa_textBox);
@@ -88,13 +90,12 @@
             tabPage1.Controls.Add(vScrollBar1);
             tabPage1.Controls.Add(lahetaVaraus_btn);
             tabPage1.Controls.Add(varaaTyokalut_listbox);
-            tabPage1.Location = new Point(4, 34);
+            tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(906, 562);
+            tabPage1.Size = new Size(906, 559);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Varaus";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -119,7 +120,7 @@
             varausMuutaTietoa_textBox.Location = new Point(237, 244);
             varausMuutaTietoa_textBox.Multiline = true;
             varausMuutaTietoa_textBox.Name = "varausMuutaTietoa_textBox";
-            varausMuutaTietoa_textBox.Size = new Size(313, 257);
+            varausMuutaTietoa_textBox.Size = new Size(313, 288);
             varausMuutaTietoa_textBox.TabIndex = 9;
             // 
             // label3
@@ -172,14 +173,14 @@
             // 
             // vScrollBar1
             // 
-            vScrollBar1.Location = new Point(198, 57);
+            vScrollBar1.Location = new Point(198, 52);
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(21, 461);
             vScrollBar1.TabIndex = 2;
             // 
             // lahetaVaraus_btn
             // 
-            lahetaVaraus_btn.Location = new Point(642, 443);
+            lahetaVaraus_btn.Location = new Point(643, 474);
             lahetaVaraus_btn.Name = "lahetaVaraus_btn";
             lahetaVaraus_btn.Size = new Size(211, 58);
             lahetaVaraus_btn.TabIndex = 1;
@@ -198,16 +199,16 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.Gainsboro;
             tabPage2.Controls.Add(button4);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(checkedListBox1);
-            tabPage2.Location = new Point(4, 34);
+            tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(906, 562);
+            tabPage2.Size = new Size(906, 559);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Palautus";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -237,16 +238,18 @@
             // 
             // tabPage3
             // 
+            tabPage3.BackColor = Color.Gainsboro;
+            tabPage3.BorderStyle = BorderStyle.FixedSingle;
             tabPage3.Controls.Add(button1);
             tabPage3.Controls.Add(button2);
             tabPage3.Controls.Add(listBox1);
-            tabPage3.Location = new Point(4, 34);
+            tabPage3.ForeColor = SystemColors.ControlText;
+            tabPage3.Location = new Point(4, 37);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(906, 562);
+            tabPage3.Size = new Size(906, 559);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Varasto";
-            tabPage3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -277,16 +280,16 @@
             // 
             // tabPage4
             // 
+            tabPage4.BackColor = Color.Gainsboro;
             tabPage4.Controls.Add(button3);
             tabPage4.Controls.Add(aktiivisetVarauksetListBox);
             tabPage4.Controls.Add(label5);
-            tabPage4.Location = new Point(4, 34);
+            tabPage4.Location = new Point(4, 37);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(906, 562);
+            tabPage4.Size = new Size(906, 559);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Varaushistoria";
-            tabPage4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -323,7 +326,7 @@
             Controls.Add(tabControl);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "Form1";
+            Text = "+";
             Load += Form1_Load;
             tabControl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
