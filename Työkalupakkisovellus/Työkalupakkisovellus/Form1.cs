@@ -3,9 +3,12 @@ namespace Työkalupakkisovellus
     public partial class Form1 : Form
     {
         private List<VarausTiedotTab> ongoingBorrowings = new List<VarausTiedotTab>();
+        private string baseUrl = "http://localhost:8080";
+        private MyApiClient apiClient;
 
         public Form1()
         {
+            
             InitializeComponent();
         }
 

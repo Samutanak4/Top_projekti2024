@@ -7,48 +7,30 @@ using System.Net.Http;
 
 namespace Työkalupakkisovellus
 {
-    public class HttpsMetodit
+    public class MyApiClient
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl;
 
-        public HttpClientExample()
-        {          
+        public MyApiClient(string baseUrl)
+        {
+            
             _httpClient = new HttpClient();
-            _baseUrl = "https://....????+.com"; // <-- API url 
+            _baseUrl = baseUrl; 
         }
 
-        
-        public async Task<string> GetDataAsync() // GET
+
+        public async Task CreateUserAsync(string username, string password)
         {
-            string apiUrl = _baseUrl + "/data"; // <- API endpoint
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-            return await response.Content.ReadAsStringAsync();
-        }
+            var requestContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("password", password)
+            });
 
-        
+            string apiUrl = $"{_baseUrl}/users/{username}";
+            HttpResponseMessage response = await _httpClient.PutAsync(apiUrl, requestContent);
 
-        public async Task<string> CreateDataAsync(string data)//POST
-        {
-            string apiUrl = _baseUrl + "/data"; 
-
-            HttpResponseMessage response = await _httpClient.PostAsync(apiUrl, new StringContent(data));
-            return await response.Content.ReadAsStringAsync();
-        }
-
-        
-        public async Task<string> UpdateDataAsync(string id, string newData) //PUT
-        {
-            string apiUrl = _baseUrl + $"/data/{id}"; // Replace with your API endpoint
-            HttpResponseMessage response = await _httpClient.PutAsync(apiUrl, new StringContent(newData));
-            return await response.Content.ReadAsStringAsync();
-        }
-
-        public async Task<string> DeleteDataAsync(string id)// DELETE
-        {
-            string apiUrl = _baseUrl + $"/data/{id}"; 
-            HttpResponseMessage response = await _httpClient.DeleteAsync(apiUrl);
-            return await response.Content.ReadAsStringAsync();
+            response.EnsureSuccessStatusCode();
         }
     }
 }

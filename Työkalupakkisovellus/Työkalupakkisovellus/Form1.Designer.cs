@@ -39,7 +39,6 @@
             label1 = new Label();
             lainaajanNimi_textBox = new TextBox();
             opettajanNimi_textBox = new TextBox();
-            vScrollBar1 = new VScrollBar();
             lahetaVaraus_btn = new Button();
             varaaTyokalut_listbox = new CheckedListBox();
             tabPage2 = new TabPage();
@@ -47,6 +46,7 @@
             label7 = new Label();
             checkedListBox1 = new CheckedListBox();
             tabPage3 = new TabPage();
+            label8 = new Label();
             button1 = new Button();
             button2 = new Button();
             listBox1 = new ListBox();
@@ -54,6 +54,8 @@
             button3 = new Button();
             aktiivisetVarauksetListBox = new ListBox();
             label5 = new Label();
+            label9 = new Label();
+            textBox1 = new TextBox();
             tabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -87,7 +89,6 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(lainaajanNimi_textBox);
             tabPage1.Controls.Add(opettajanNimi_textBox);
-            tabPage1.Controls.Add(vScrollBar1);
             tabPage1.Controls.Add(lahetaVaraus_btn);
             tabPage1.Controls.Add(varaaTyokalut_listbox);
             tabPage1.Location = new Point(4, 37);
@@ -171,13 +172,6 @@
             opettajanNimi_textBox.Size = new Size(313, 31);
             opettajanNimi_textBox.TabIndex = 3;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(198, 52);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(21, 461);
-            vScrollBar1.TabIndex = 2;
-            // 
             // lahetaVaraus_btn
             // 
             lahetaVaraus_btn.Location = new Point(643, 474);
@@ -233,13 +227,14 @@
             checkedListBox1.FormattingEnabled = true;
             checkedListBox1.Location = new Point(9, 37);
             checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(326, 498);
+            checkedListBox1.Size = new Size(212, 498);
             checkedListBox1.TabIndex = 0;
             // 
             // tabPage3
             // 
             tabPage3.BackColor = Color.Gainsboro;
             tabPage3.BorderStyle = BorderStyle.FixedSingle;
+            tabPage3.Controls.Add(label8);
             tabPage3.Controls.Add(button1);
             tabPage3.Controls.Add(button2);
             tabPage3.Controls.Add(listBox1);
@@ -250,6 +245,15 @@
             tabPage3.Size = new Size(906, 559);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Varasto";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(8, 5);
+            label8.Name = "label8";
+            label8.Size = new Size(222, 25);
+            label8.TabIndex = 3;
+            label8.Text = "Varastossa olevat työkalut:";
             // 
             // button1
             // 
@@ -273,14 +277,16 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(8, 8);
+            listBox1.Location = new Point(8, 33);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(352, 529);
+            listBox1.Size = new Size(211, 504);
             listBox1.TabIndex = 0;
             // 
             // tabPage4
             // 
             tabPage4.BackColor = Color.Gainsboro;
+            tabPage4.Controls.Add(textBox1);
+            tabPage4.Controls.Add(label9);
             tabPage4.Controls.Add(button3);
             tabPage4.Controls.Add(aktiivisetVarauksetListBox);
             tabPage4.Controls.Add(label5);
@@ -293,9 +299,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(276, 36);
+            button3.Location = new Point(667, 486);
             button3.Name = "button3";
-            button3.Size = new Size(202, 45);
+            button3.Size = new Size(220, 54);
             button3.TabIndex = 2;
             button3.Text = "Muokkaa varausta";
             button3.UseVisualStyleBackColor = true;
@@ -306,7 +312,7 @@
             aktiivisetVarauksetListBox.ItemHeight = 25;
             aktiivisetVarauksetListBox.Location = new Point(8, 36);
             aktiivisetVarauksetListBox.Name = "aktiivisetVarauksetListBox";
-            aktiivisetVarauksetListBox.Size = new Size(253, 504);
+            aktiivisetVarauksetListBox.Size = new Size(211, 504);
             aktiivisetVarauksetListBox.TabIndex = 1;
             // 
             // label5
@@ -317,6 +323,23 @@
             label5.Size = new Size(167, 25);
             label5.TabIndex = 0;
             label5.Text = "Aktiiviset varaukset:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(259, 8);
+            label9.Name = "label9";
+            label9.Size = new Size(148, 25);
+            label9.TabIndex = 3;
+            label9.Text = "Varauksen tiedot:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(259, 36);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(222, 305);
+            textBox1.TabIndex = 4;
             // 
             // Form1
             // 
@@ -334,6 +357,7 @@
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             tabPage4.ResumeLayout(false);
             tabPage4.PerformLayout();
             ResumeLayout(false);
@@ -351,7 +375,6 @@
         private Button button1;
         private CheckedListBox checkedListBox1;
         private Button lahetaVaraus_btn;
-        private VScrollBar vScrollBar1;
         private TextBox textBox2;
         private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
@@ -373,5 +396,7 @@
         private Label label6;
         private Button button4;
         private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }
