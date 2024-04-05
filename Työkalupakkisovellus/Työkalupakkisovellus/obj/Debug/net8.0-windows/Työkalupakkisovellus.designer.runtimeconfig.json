@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Jesu16\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Jesu16\\.nuget\\packages"
+      "C:\\Users\\ripas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ripas\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

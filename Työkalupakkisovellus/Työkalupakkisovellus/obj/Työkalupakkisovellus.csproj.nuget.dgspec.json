@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {}
+    "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {
+    "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
+        "projectUniqueName": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
         "projectName": "Työkalupakkisovellus",
-        "projectPath": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
-        "packagesPath": "C:\\Users\\Jesu16\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jesu16\\source\\repos\\TopTyokalupakki\\Työkalupakkisovellus\\Työkalupakkisovellus\\obj\\",
+        "projectPath": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\Työkalupakkisovellus.csproj",
+        "packagesPath": "C:\\Users\\ripas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ripas\\source\\repos\\Top_Projekti\\Työkalupakkisovellus\\Työkalupakkisovellus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jesu16\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ripas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,38 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Jering.Javascript.NodeJS": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.2, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.23.2, )"
+            },
+            "Node.js": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
