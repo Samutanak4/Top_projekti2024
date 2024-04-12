@@ -7,12 +7,12 @@ using System.Net.Http;
 
 namespace Työkalupakkisovellus
 {
-    public class MyApiClient
+    public class ApiClient
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl;
 
-        public MyApiClient(string baseUrl)
+        public ApiClient(string baseUrl)
         {
             
             _httpClient = new HttpClient();

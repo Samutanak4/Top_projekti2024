@@ -290,7 +290,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.23.2": {
+      "MongoDB.Bson/2.24.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -1794,10 +1794,10 @@
         "version.txt"
       ]
     },
-    "MongoDB.Bson/2.23.2": {
-      "sha512": "t/llHI4ovbUmk5u1hQWnLAq8XOyMCTzGBLejkfSX0ziY7N/qFHiglgcchpS+/uQHIe7og2BY5zevmxSho87dEA==",
+    "MongoDB.Bson/2.24.0": {
+      "sha512": "n8CWaA4iTuoEQYv0+FSKNTX/hJozFQa5EgSILVNPhTGHcrbABHhpVrT1NwRRAAS6sUb8ZyhHmLPBa88LJemptA==",
       "type": "package",
-      "path": "mongodb.bson/2.23.2",
+      "path": "mongodb.bson/2.24.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1808,7 +1808,7 @@
         "lib/netstandard2.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.2.23.2.nupkg.sha512",
+        "mongodb.bson.2.24.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
@@ -4254,6 +4254,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Jering.Javascript.NodeJS >= 7.0.0",
+      "MongoDB.Bson >= 2.24.0",
       "MongoDB.Driver >= 2.23.2",
       "MongoDB.Driver.Core >= 2.23.2",
       "Node.js >= 5.3.0",
@@ -4307,6 +4308,10 @@
           "Jering.Javascript.NodeJS": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[2.24.0, )"
           },
           "MongoDB.Driver": {
             "target": "Package",

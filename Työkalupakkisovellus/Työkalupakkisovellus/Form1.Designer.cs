@@ -49,13 +49,13 @@
             label8 = new Label();
             button1 = new Button();
             button2 = new Button();
-            listBox1 = new ListBox();
+            varastoListbox = new ListBox();
             tabPage4 = new TabPage();
+            textBox1 = new TextBox();
+            label9 = new Label();
             button3 = new Button();
             aktiivisetVarauksetListBox = new ListBox();
             label5 = new Label();
-            label9 = new Label();
-            textBox1 = new TextBox();
             tabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -110,7 +110,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(237, 216);
+            label4.Location = new Point(224, 216);
             label4.Name = "label4";
             label4.Size = new Size(122, 25);
             label4.TabIndex = 10;
@@ -118,7 +118,8 @@
             // 
             // varausMuutaTietoa_textBox
             // 
-            varausMuutaTietoa_textBox.Location = new Point(237, 244);
+            varausMuutaTietoa_textBox.BorderStyle = BorderStyle.FixedSingle;
+            varausMuutaTietoa_textBox.Location = new Point(224, 244);
             varausMuutaTietoa_textBox.Multiline = true;
             varausMuutaTietoa_textBox.Name = "varausMuutaTietoa_textBox";
             varausMuutaTietoa_textBox.Size = new Size(313, 288);
@@ -127,7 +128,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(237, 140);
+            label3.Location = new Point(224, 140);
             label3.Name = "label3";
             label3.Size = new Size(105, 25);
             label3.TabIndex = 8;
@@ -135,7 +136,7 @@
             // 
             // varaus_dateTimePicker
             // 
-            varaus_dateTimePicker.Location = new Point(237, 168);
+            varaus_dateTimePicker.Location = new Point(224, 168);
             varaus_dateTimePicker.Name = "varaus_dateTimePicker";
             varaus_dateTimePicker.Size = new Size(313, 31);
             varaus_dateTimePicker.TabIndex = 7;
@@ -143,7 +144,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(237, 68);
+            label2.Location = new Point(224, 68);
             label2.Name = "label2";
             label2.Size = new Size(133, 25);
             label2.TabIndex = 6;
@@ -152,7 +153,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(237, 6);
+            label1.Location = new Point(224, 3);
             label1.Name = "label1";
             label1.Size = new Size(127, 25);
             label1.TabIndex = 5;
@@ -160,14 +161,14 @@
             // 
             // lainaajanNimi_textBox
             // 
-            lainaajanNimi_textBox.Location = new Point(237, 34);
+            lainaajanNimi_textBox.Location = new Point(224, 34);
             lainaajanNimi_textBox.Name = "lainaajanNimi_textBox";
             lainaajanNimi_textBox.Size = new Size(313, 31);
             lainaajanNimi_textBox.TabIndex = 4;
             // 
             // opettajanNimi_textBox
             // 
-            opettajanNimi_textBox.Location = new Point(237, 96);
+            opettajanNimi_textBox.Location = new Point(224, 96);
             opettajanNimi_textBox.Name = "opettajanNimi_textBox";
             opettajanNimi_textBox.Size = new Size(313, 31);
             opettajanNimi_textBox.TabIndex = 3;
@@ -185,11 +186,12 @@
             // varaaTyokalut_listbox
             // 
             varaaTyokalut_listbox.FormattingEnabled = true;
-            varaaTyokalut_listbox.Items.AddRange(new object[] { "Vasara", "Ruuvimeisseli", "Kypärä", "Jännitemittari" });
+            varaaTyokalut_listbox.HorizontalScrollbar = true;
             varaaTyokalut_listbox.Location = new Point(8, 34);
             varaaTyokalut_listbox.Name = "varaaTyokalut_listbox";
-            varaaTyokalut_listbox.Size = new Size(211, 498);
+            varaaTyokalut_listbox.Size = new Size(210, 498);
             varaaTyokalut_listbox.TabIndex = 0;
+            varaaTyokalut_listbox.SelectedIndexChanged += varaaTyokalut_listbox_SelectedIndexChanged;
             // 
             // tabPage2
             // 
@@ -237,7 +239,7 @@
             tabPage3.Controls.Add(label8);
             tabPage3.Controls.Add(button1);
             tabPage3.Controls.Add(button2);
-            tabPage3.Controls.Add(listBox1);
+            tabPage3.Controls.Add(varastoListbox);
             tabPage3.ForeColor = SystemColors.ControlText;
             tabPage3.Location = new Point(4, 37);
             tabPage3.Name = "tabPage3";
@@ -273,14 +275,15 @@
             button2.Text = "Lisää työkalu +";
             button2.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // varastoListbox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(8, 33);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(211, 504);
-            listBox1.TabIndex = 0;
+            varastoListbox.FormattingEnabled = true;
+            varastoListbox.HorizontalScrollbar = true;
+            varastoListbox.ItemHeight = 25;
+            varastoListbox.Location = new Point(8, 33);
+            varastoListbox.Name = "varastoListbox";
+            varastoListbox.Size = new Size(211, 504);
+            varastoListbox.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -296,6 +299,23 @@
             tabPage4.Size = new Size(906, 559);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Varaushistoria";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(259, 36);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(222, 305);
+            textBox1.TabIndex = 4;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(259, 8);
+            label9.Name = "label9";
+            label9.Size = new Size(148, 25);
+            label9.TabIndex = 3;
+            label9.Text = "Varauksen tiedot:";
             // 
             // button3
             // 
@@ -324,23 +344,6 @@
             label5.TabIndex = 0;
             label5.Text = "Aktiiviset varaukset:";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(259, 8);
-            label9.Name = "label9";
-            label9.Size = new Size(148, 25);
-            label9.TabIndex = 3;
-            label9.Text = "Varauksen tiedot:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(259, 36);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(222, 305);
-            textBox1.TabIndex = 4;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -349,7 +352,7 @@
             Controls.Add(tabControl);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
-            Text = "+";
+            Text = "Työkalujen hallintasovellus";
             Load += Form1_Load;
             tabControl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
@@ -384,7 +387,7 @@
         private Label label4;
         private TextBox textBox3;
         private Button button2;
-        private ListBox listBox1;
+        private ListBox varastoListbox;
         private ListBox aktiivisetVarauksetListBox;
         private Label label5;
         private Button button3;

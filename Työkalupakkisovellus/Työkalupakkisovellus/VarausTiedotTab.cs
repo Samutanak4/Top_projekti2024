@@ -8,10 +8,26 @@ namespace Työkalupakkisovellus
 {
     public class VarausTiedotTab
     {
-        public List<string> Tools { get; set; }
-        public string TeacherName { get; set; }
-        public string StudentName { get; set; }
-        public DateTime DateTime { get; set; }
-        public string MoreInfo { get; set; }
+        private IMongoCollection<BsonDocument> _activeBookingsCollection;
+
+        public VarausTiedotTab()
+        {
+            var client = new MongoClient("mongodb://localhost:27017");
+            var database = client.GetDatabase("TyokaluDB");
+            _activeBookingsCollection = database.GetCollection<BsonDocument>("ActiveBookings");
+        }
+
+        public void SendBookingInfo(string studentName, string teacherName, DateTime dateTime, string additionalInfo, IEnumerable<string> checkedTools)
+        {           
+            var document = new BsonDocument
+            {
+                { "studentName", studentName },
+                { "teacherName", teacherName },
+                { "dateTime", dateTime },
+                { "additionalInfo", additionalInfo },
+                { "checkedTools", new BsonArray(checkedTools) }
+            };          
+            _activeBookingsCollection.InsertOne(document);
+        }
     }
 }
