@@ -5,30 +5,32 @@ namespace Työkalupakkisovellus
 {
     public partial class Form1 : Form
     {
+
         private VarausTiedotTab _borrowingInfo;
         private IMongoCollection<BsonDocument> _toolsCollection;
         private IMongoCollection<BsonDocument> _activeBookings;
 
+
         public Form1()
         {
             InitializeComponent();
-
             
             var client = new MongoClient("mongodb://localhost:27017/");
             var database = client.GetDatabase("TyokaluDB");
             _toolsCollection = database.GetCollection<BsonDocument>("Tools");
             _activeBookings = database.GetCollection<BsonDocument>("ActiveBookings");
-            FillCheckedListBox();
+            FillCheckedListBoxTools();
 
             _borrowingInfo = new VarausTiedotTab();
         }
 
-        private void FillCheckedListBox()
+
+        private void FillCheckedListBoxTools()
         {
             var filter = Builders<BsonDocument>.Filter.Empty;
-            var projection = Builders<BsonDocument>.Projection.Include("displayName"); 
+            var show = Builders<BsonDocument>.Projection.Include("displayName"); 
 
-            var tools = _toolsCollection.Find(filter).Project(projection).ToList();
+            var tools = _toolsCollection.Find(filter).Project(show).ToList();
 
             foreach (var tool in tools)
             {
@@ -37,6 +39,7 @@ namespace Työkalupakkisovellus
                 varastoListbox.Items.Add(displayName);
             }
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -59,6 +62,7 @@ namespace Työkalupakkisovellus
             }
 
             _borrowingInfo.SendBookingInfo(studentName, teacherName, dateTime, additionalInfo, checkedTools);
+            
             ClearFields();
         }
 
@@ -75,6 +79,11 @@ namespace Työkalupakkisovellus
             opettajanNimi_textBox.Text = "";
             varaus_dateTimePicker.Value = DateTime.Now;
             varausMuutaTietoa_textBox.Text = "";
+
+            foreach (int index in varaaTyokalut_listbox.CheckedIndices)
+            {
+                varaaTyokalut_listbox.SetItemChecked(index, false);
+            }
         }
 
         private void varaaTyokalut_listbox_SelectedIndexChanged(object sender, EventArgs e)

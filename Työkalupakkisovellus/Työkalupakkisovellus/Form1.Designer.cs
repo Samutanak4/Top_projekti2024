@@ -42,9 +42,10 @@
             lahetaVaraus_btn = new Button();
             varaaTyokalut_listbox = new CheckedListBox();
             tabPage2 = new TabPage();
+            palautusListbox = new ListBox();
+            palautusTyokalutListbox = new CheckedListBox();
             button4 = new Button();
             label7 = new Label();
-            checkedListBox1 = new CheckedListBox();
             tabPage3 = new TabPage();
             label8 = new Label();
             button1 = new Button();
@@ -65,7 +66,7 @@
             // 
             // tabControl
             // 
-            tabControl.Appearance = TabAppearance.FlatButtons;
+            tabControl.Appearance = TabAppearance.Buttons;
             tabControl.Controls.Add(tabPage1);
             tabControl.Controls.Add(tabPage2);
             tabControl.Controls.Add(tabPage3);
@@ -196,15 +197,33 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.Gainsboro;
+            tabPage2.Controls.Add(palautusListbox);
+            tabPage2.Controls.Add(palautusTyokalutListbox);
             tabPage2.Controls.Add(button4);
             tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(checkedListBox1);
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(906, 559);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Palautus";
+            // 
+            // palautusListbox
+            // 
+            palautusListbox.FormattingEnabled = true;
+            palautusListbox.ItemHeight = 25;
+            palautusListbox.Location = new Point(9, 37);
+            palautusListbox.Name = "palautusListbox";
+            palautusListbox.Size = new Size(227, 504);
+            palautusListbox.TabIndex = 4;
+            // 
+            // palautusTyokalutListbox
+            // 
+            palautusTyokalutListbox.FormattingEnabled = true;
+            palautusTyokalutListbox.Location = new Point(279, 37);
+            palautusTyokalutListbox.Name = "palautusTyokalutListbox";
+            palautusTyokalutListbox.Size = new Size(293, 498);
+            palautusTyokalutListbox.TabIndex = 3;
             // 
             // button4
             // 
@@ -223,14 +242,6 @@
             label7.Size = new Size(227, 25);
             label7.TabIndex = 1;
             label7.Text = "Valitse palautettava lainaus:";
-            // 
-            // checkedListBox1
-            // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(9, 37);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(212, 498);
-            checkedListBox1.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -401,5 +412,7 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        private CheckedListBox palautusTyokalutListbox;
+        private ListBox palautusListbox;
     }
 }
