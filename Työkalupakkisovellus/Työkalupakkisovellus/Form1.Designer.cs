@@ -1,6 +1,6 @@
 ﻿namespace Työkalupakkisovellus
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -355,14 +355,14 @@
             label5.TabIndex = 0;
             label5.Text = "Aktiiviset varaukset:";
             // 
-            // Form1
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
             Controls.Add(tabControl);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1";
+            Name = "FormMain";
             Text = "Työkalujen hallintasovellus";
             Load += Form1_Load;
             tabControl.ResumeLayout(false);

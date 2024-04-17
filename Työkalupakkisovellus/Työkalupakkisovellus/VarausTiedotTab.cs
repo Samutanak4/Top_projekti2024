@@ -18,7 +18,7 @@ namespace Työkalupakkisovellus
         }
 
         public void SendBookingInfo(string studentName, string teacherName, DateTime dateTime, string additionalInfo, IEnumerable<string> checkedTools)
-        {           
+        {
             var document = new BsonDocument
             {
                 { "studentName", studentName },
@@ -26,7 +26,8 @@ namespace Työkalupakkisovellus
                 { "dateTime", dateTime },
                 { "additionalInfo", additionalInfo },
                 { "checkedTools", new BsonArray(checkedTools) }
-            };          
+            };
+
             _activeBookingsCollection.InsertOne(document);
         }
     }
