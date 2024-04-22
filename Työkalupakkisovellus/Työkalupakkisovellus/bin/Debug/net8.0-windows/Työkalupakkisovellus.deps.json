@@ -9,6 +9,7 @@
       "Työkalupakkisovellus/1.0.0": {
         "dependencies": {
           "Jering.Javascript.NodeJS": "7.0.0",
+          "Microsoft.AspNetCore.NodeServices": "3.1.32",
           "MongoDB.Bson": "2.24.0",
           "MongoDB.Driver": "2.23.2",
           "MongoDB.Driver.Core": "2.23.2",
@@ -63,46 +64,43 @@
           }
         }
       },
+      "Microsoft.AspNetCore.NodeServices/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Console": "3.1.32",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.NodeServices.dll": {
+            "assemblyVersion": "3.1.32.0",
+            "fileVersion": "3.100.3222.56610"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.32"
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
-        }
-      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {},
       "Microsoft.Extensions.FileProviders.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
         }
       },
       "Microsoft.Extensions.Hosting.Abstractions/7.0.0": {
@@ -110,12 +108,6 @@
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "7.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.Hosting.Abstractions.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
         }
       },
       "Microsoft.Extensions.Http/6.0.0": {
@@ -124,12 +116,6 @@
           "Microsoft.Extensions.Logging": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
       "Microsoft.Extensions.Logging/6.0.0": {
@@ -139,42 +125,37 @@
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.Logging.Configuration/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.1.32"
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "3.1.32"
         }
       },
       "Microsoft.Extensions.Options/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
           "Microsoft.Extensions.Primitives": "7.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
-      "Microsoft.Extensions.Primitives/7.0.0": {
-        "runtime": {
-          "lib/net7.0/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
+      "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.32": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.32",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         }
       },
+      "Microsoft.Extensions.Primitives/7.0.0": {},
       "Microsoft.NETCore.Platforms/5.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Registry/5.0.0": {
@@ -250,6 +231,14 @@
             "rid": "win",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         }
       },
@@ -721,12 +710,33 @@
       "path": "jering.javascript.nodejs/7.0.0",
       "hashPath": "jering.javascript.nodejs.7.0.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.NodeServices/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WGtOOAaW7AWaYXkR/TqBI5hDd2S17iImWKxraC9q9v6MpxUvqUyvlaF+IVJp+rU4Mxy7IzrhxrtU1YfUDLSXIA==",
+      "path": "microsoft.aspnetcore.nodeservices/3.1.32",
+      "hashPath": "microsoft.aspnetcore.nodeservices.3.1.32.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WuOHTU9FB1yHaIU+/Ar1s5swHshH+7YjU7eA9Lmv0kO+rta7xOrR5Xu68srdxNpE9HjqjzxGZhPJFLxpP3J1Og==",
+      "path": "microsoft.extensions.configuration/3.1.32",
+      "hashPath": "microsoft.extensions.configuration.3.1.32.nupkg.sha512"
+    },
     "Microsoft.Extensions.Configuration.Abstractions/7.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-f34u2eaqIjNO9YLHBz8rozVZ+TcFiFs0F3r7nUJd7FRkVSxk8u4OpoK226mi49MwexHOR2ibP9MFvRUaLilcQQ==",
       "path": "microsoft.extensions.configuration.abstractions/7.0.0",
       "hashPath": "microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Binder/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e89Od7dtbQpSPL3wNLlZ5LYv6KtMczxr2KSTULt4mhhUnMJtSfDIe1JJJJaL/Ed2+cwyAXtkMpqf4aR/Sd4mTQ==",
+      "path": "microsoft.extensions.configuration.binder/3.1.32",
+      "hashPath": "microsoft.extensions.configuration.binder.3.1.32.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/6.0.0": {
       "type": "package",
@@ -777,12 +787,33 @@
       "path": "microsoft.extensions.logging.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Configuration/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vuXndyh4O9l8BxNu2U6ubH3MD2XN9aPOZfVRbceHqmsb09zC/pnaTzGtQwP244zoVpJ5+nl4lmfadMUqrIE15w==",
+      "path": "microsoft.extensions.logging.configuration/3.1.32",
+      "hashPath": "microsoft.extensions.logging.configuration.3.1.32.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Console/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nwny4TTeZHNTEUwEnM4sd7YW6BX4zLJhESuSmaV3LbIdZNxQjx+NcoBRQKM6ClVwSB9bvaRoL+Oh+RnO7XE5mw==",
+      "path": "microsoft.extensions.logging.console/3.1.32",
+      "hashPath": "microsoft.extensions.logging.console.3.1.32.nupkg.sha512"
+    },
     "Microsoft.Extensions.Options/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
       "path": "microsoft.extensions.options/6.0.0",
       "hashPath": "microsoft.extensions.options.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cID9wK4QRSIcScSb928oj+GjS1J5WGxwKoR7DdNsk7rHKaIlOAhOS/RAsKrDApm+EVp1cnOd1gvLeFOSOYQcqQ==",
+      "path": "microsoft.extensions.options.configurationextensions/3.1.32",
+      "hashPath": "microsoft.extensions.options.configurationextensions.3.1.32.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "type": "package",
@@ -839,6 +870,13 @@
       "sha512": "sha512-fgNw8Dxpkq7mpoaAYes8cfnPRzvFIoB8oL9GPXwi3op/rONftl0WAeg4akRLcxfoVuUvuUO2wGoVBr3JzJ7Svw==",
       "path": "mongodb.libmongocrypt/1.8.0",
       "hashPath": "mongodb.libmongocrypt.1.8.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "Node.js/5.3.0": {
       "type": "package",

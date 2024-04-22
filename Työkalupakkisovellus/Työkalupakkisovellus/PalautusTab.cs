@@ -8,5 +8,9 @@ namespace Työkalupakkisovellus
 {
     internal class PalautusTab
     {
+        public PalautusTab() 
+        {
+            
+        }
     }
 }
