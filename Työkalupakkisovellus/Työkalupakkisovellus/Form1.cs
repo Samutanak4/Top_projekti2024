@@ -9,6 +9,8 @@ namespace Työkalupakkisovellus
 
         private VarausTiedotTab _borrowingInfo;
         private PalautusTab _returnInfo;
+        private TyokalulistaTab _toolsInfo;
+
         private IMongoCollection<BsonDocument> _toolsCollection;
         private IMongoCollection<BsonDocument> _activeBookings;
 
@@ -28,6 +30,8 @@ namespace Työkalupakkisovellus
             TickCheckedListBox();
 
             _borrowingInfo = new VarausTiedotTab();
+            _returnInfo = new PalautusTab(palautusTyokalutListbox, korvaushintaLabel, palautaButton, palautusListbox, _borrowingInfo);
+            
         }
 
 
@@ -82,7 +86,7 @@ namespace Työkalupakkisovellus
             }
 
             _borrowingInfo.SendBookingInfo(studentName, teacherName, dateTime, additionalInfo, checkedTools);
-            aktiivisetVarauksetListBox.Items.Add(studentName);
+            //aktiivisetVarauksetListBox.Items.Add(studentName); Varaussivu / Ei käytössä
             palautusListbox.Items.Add(studentName);
 
 
@@ -101,7 +105,7 @@ namespace Työkalupakkisovellus
             foreach (var name in names)
             {
                 string displayName = name.GetValue("studentName").AsString;
-                aktiivisetVarauksetListBox.Items.Add(displayName);
+                //aktiivisetVarauksetListBox.Items.Add(displayName); // Varaussivu // Ei käytössä
                 palautusListbox.Items.Add(displayName);
             }
 
@@ -166,14 +170,52 @@ namespace Työkalupakkisovellus
                     palautusTyokalutListbox.Items.Clear();
                     palautusTiedotTextBox.Clear();
 
-                    MessageBox.Show("Booking details not found for the selected student.");
+                    MessageBox.Show("Valitulle nimikkeelle ei löydy tietoja.");
                 }
             }
+
+
         }
 
         private void palautaButton_Click(object sender, EventArgs e)
         {
+            _returnInfo.palautusButton_Click(sender, e);
+        }
 
+        private void lisaaTyokaluButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            FilterListBoxItems(textBoxSearch.Text);
+            
+        }
+
+        private void FilterListBoxItems(string searchText)
+        {
+            var bookingNames = _borrowingInfo.GetBookingName();
+            palautusListbox.Items.Clear();
+
+            foreach (var name in bookingNames)
+            {
+
+                if (name.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    palautusListbox.Items.Add(name);
+                }
+            }
+        }
+
+        private void varastoListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (varastoListbox.SelectedItem != null)
+            {
+                string selectedToolName = varastoListbox.SelectedItem.ToString();
+                decimal replacementCost = _toolsInfo.GetToolReplacementCost(selectedToolName);
+                replacementValueTextBox.Text = "Valitun työkalun korvaushinta: " + replacementCost.ToString("C2");  
+            }
         }
     }
 }
