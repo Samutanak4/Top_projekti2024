@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Työkalupakkisovellus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d29f1a50f04f1b8ac374e3ce25b4c1d8b13452d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25a4b1e4b855afa4f73e935e7c599375424ef5f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Työkalupakkisovellus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Työkalupakkisovellus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

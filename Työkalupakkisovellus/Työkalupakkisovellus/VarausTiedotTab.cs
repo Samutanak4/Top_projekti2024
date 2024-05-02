@@ -47,7 +47,7 @@ namespace Työkalupakkisovellus
 
         public void RemoveBooking(string bookingId)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(bookingId));
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(bookingId)); // _id
             _activeBookingsCollection.DeleteOne(filter);
         }
 
