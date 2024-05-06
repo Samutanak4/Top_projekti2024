@@ -28,10 +28,11 @@ namespace Työkalupakkisovellus
             FillCheckedListBoxTools();
             UpdateOngoingBookingListBox();
             TickCheckedListBox();
+            PopulateToolsList();
 
             _borrowingInfo = new VarausTiedotTab();
             _returnInfo = new PalautusTab(palautusTyokalutListbox, korvaushintaLabel, palautaButton, palautusListbox, _borrowingInfo);
-            
+            _toolsInfo = new TyokalulistaTab("mongodb://localhost:27017/", "TyokaluDB", "Tools");
         }
 
 
@@ -182,15 +183,12 @@ namespace Työkalupakkisovellus
             _returnInfo.palautusButton_Click(sender, e);
         }
 
-        private void lisaaTyokaluButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             FilterListBoxItems(textBoxSearch.Text);
-            
+
         }
 
         private void FilterListBoxItems(string searchText)
@@ -212,9 +210,54 @@ namespace Työkalupakkisovellus
         {
             if (varastoListbox.SelectedItem != null)
             {
-                string selectedToolName = varastoListbox.SelectedItem.ToString();
-                decimal replacementCost = _toolsInfo.GetToolReplacementCost(selectedToolName);
-                replacementValueTextBox.Text = "Valitun työkalun korvaushinta: " + replacementCost.ToString("C2");  
+                string selectedTool = varastoListbox.SelectedItem.ToString();
+                decimal replacementCost = _toolsInfo.GetToolReplacementCost(selectedTool);
+                replacementValueTextBox.Text = $"Replacement Cost: €{replacementCost:N2}";
+            }
+        }
+
+        private void poistaTyokaluButton_Click(object sender, EventArgs e)
+        {
+            if (varastoListbox.SelectedItem != null)
+            {
+                string selectedTool = varastoListbox.SelectedItem.ToString();
+                _toolsInfo.RemoveTool(selectedTool);
+                PopulateToolsList();
+                
+            }
+            else
+            {
+                MessageBox.Show("Please select a tool to remove.");
+            }
+
+
+        }
+
+        private void lisaaTyokaluButton_Click(object sender, EventArgs e)
+        {
+            string toolName = tyokaluNimiText.Text;
+            if (!decimal.TryParse(tyokaluKorvausText.Text, out decimal replacementCost))
+            {
+                MessageBox.Show("Annettu luku ei kelpaa.");
+                return;
+            }
+
+            _toolsInfo.AddTool(toolName, replacementCost);
+
+            PopulateToolsList();
+
+            tyokaluNimiText.Clear();
+            tyokaluKorvausText.Clear();
+        }
+
+        private void PopulateToolsList()
+        {
+            varastoListbox.Items.Clear();
+            var tools = _toolsInfo.GetAllTools();
+            foreach (var tool in tools)
+            {
+                varastoListbox.Items.Add(tool);
+                //varaaTyokalut_listbox.Items.Add(tool);
             }
         }
     }

@@ -33,3 +33,4 @@ C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisove
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalup.5FCEC6C8.Up2Date
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Microsoft.AspNetCore.NodeServices.dll
 C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ripas\source\repos\Top_Projekti\Työkalupakkisovellus\Työkalupakkisovellus\obj\Debug\net8.0-windows\Työkalupakkisovellus.Form2.resources

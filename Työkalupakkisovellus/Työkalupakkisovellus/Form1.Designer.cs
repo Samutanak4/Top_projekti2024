@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             tyokaluListaTabPage = new TabPage();
+            label13 = new Label();
+            label12 = new Label();
+            tyokaluKorvausText = new TextBox();
+            tyokaluNimiText = new TextBox();
+            label9 = new Label();
             replacementValueTextBox = new TextBox();
             label8 = new Label();
             poistaTyokaluButton = new Button();
@@ -68,6 +73,11 @@
             // 
             tyokaluListaTabPage.BackColor = Color.Gainsboro;
             tyokaluListaTabPage.BorderStyle = BorderStyle.FixedSingle;
+            tyokaluListaTabPage.Controls.Add(label13);
+            tyokaluListaTabPage.Controls.Add(label12);
+            tyokaluListaTabPage.Controls.Add(tyokaluKorvausText);
+            tyokaluListaTabPage.Controls.Add(tyokaluNimiText);
+            tyokaluListaTabPage.Controls.Add(label9);
             tyokaluListaTabPage.Controls.Add(replacementValueTextBox);
             tyokaluListaTabPage.Controls.Add(label8);
             tyokaluListaTabPage.Controls.Add(poistaTyokaluButton);
@@ -80,6 +90,47 @@
             tyokaluListaTabPage.Size = new Size(906, 559);
             tyokaluListaTabPage.TabIndex = 2;
             tyokaluListaTabPage.Text = "Työkalulista";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(549, 201);
+            label13.Name = "label13";
+            label13.Size = new Size(192, 25);
+            label13.TabIndex = 9;
+            label13.Text = "Työkalun korvaushinta:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(549, 129);
+            label12.Name = "label12";
+            label12.Size = new Size(125, 25);
+            label12.TabIndex = 8;
+            label12.Text = "Työkalun nimi:";
+            // 
+            // tyokaluKorvausText
+            // 
+            tyokaluKorvausText.Location = new Point(549, 229);
+            tyokaluKorvausText.Name = "tyokaluKorvausText";
+            tyokaluKorvausText.Size = new Size(192, 31);
+            tyokaluKorvausText.TabIndex = 7;
+            // 
+            // tyokaluNimiText
+            // 
+            tyokaluNimiText.Location = new Point(549, 157);
+            tyokaluNimiText.Name = "tyokaluNimiText";
+            tyokaluNimiText.Size = new Size(192, 31);
+            tyokaluNimiText.TabIndex = 6;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(549, 92);
+            label9.Name = "label9";
+            label9.Size = new Size(219, 25);
+            label9.TabIndex = 5;
+            label9.Text = "Lisättävän työkalun tiedot:";
             // 
             // replacementValueTextBox
             // 
@@ -101,18 +152,19 @@
             // 
             // poistaTyokaluButton
             // 
-            poistaTyokaluButton.Location = new Point(733, 457);
+            poistaTyokaluButton.Location = new Point(738, 33);
             poistaTyokaluButton.Name = "poistaTyokaluButton";
-            poistaTyokaluButton.Size = new Size(152, 37);
+            poistaTyokaluButton.Size = new Size(145, 37);
             poistaTyokaluButton.TabIndex = 2;
             poistaTyokaluButton.Text = "Poista työkalu -";
             poistaTyokaluButton.UseVisualStyleBackColor = true;
+            poistaTyokaluButton.Click += poistaTyokaluButton_Click;
             // 
             // lisaaTyokaluButton
             // 
-            lisaaTyokaluButton.Location = new Point(733, 500);
+            lisaaTyokaluButton.Location = new Point(549, 33);
             lisaaTyokaluButton.Name = "lisaaTyokaluButton";
-            lisaaTyokaluButton.Size = new Size(152, 37);
+            lisaaTyokaluButton.Size = new Size(145, 37);
             lisaaTyokaluButton.TabIndex = 1;
             lisaaTyokaluButton.Text = "Lisää työkalu +";
             lisaaTyokaluButton.UseVisualStyleBackColor = true;
@@ -401,7 +453,7 @@
         private Panel panel1;
         private TabPage Varaushistoria;
         private CheckedListBox checkedListBox1;
-        private TextBox textBox2;
+        private TextBox tyokaluKorvausText;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox3;
         private TabPage tyokaluListaTabPage;
@@ -434,5 +486,9 @@
         private Label label5;
         private TextBox textBoxSearch;
         private TextBox replacementValueTextBox;
+        private Label label9;
+        private Label label13;
+        private Label label12;
+        private TextBox tyokaluNimiText;
     }
 }
