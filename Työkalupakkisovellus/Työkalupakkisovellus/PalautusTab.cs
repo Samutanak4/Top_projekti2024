@@ -14,7 +14,7 @@ namespace Työkalupakkisovellus
         private Button _palautaButton;
         private ListBox _palautusListBox;
 
-        private VarausTiedotTab _activeBooking;
+        //private VarausTiedotTab _activeBooking;
 
         public PalautusTab(CheckedListBox checkedToolsListBox, Label replacementCostLabel, Button returnButton, ListBox palautusListBox, VarausTiedotTab borrowingInfo)
         {

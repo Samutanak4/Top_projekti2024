@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             tyokaluListaTabPage = new TabPage();
+            button1 = new Button();
             label13 = new Label();
             label12 = new Label();
             tyokaluKorvausText = new TextBox();
@@ -73,6 +74,7 @@
             // 
             tyokaluListaTabPage.BackColor = Color.Gainsboro;
             tyokaluListaTabPage.BorderStyle = BorderStyle.FixedSingle;
+            tyokaluListaTabPage.Controls.Add(button1);
             tyokaluListaTabPage.Controls.Add(label13);
             tyokaluListaTabPage.Controls.Add(label12);
             tyokaluListaTabPage.Controls.Add(tyokaluKorvausText);
@@ -87,14 +89,23 @@
             tyokaluListaTabPage.Location = new Point(4, 37);
             tyokaluListaTabPage.Name = "tyokaluListaTabPage";
             tyokaluListaTabPage.Padding = new Padding(3);
-            tyokaluListaTabPage.Size = new Size(906, 559);
+            tyokaluListaTabPage.Size = new Size(1894, 992);
             tyokaluListaTabPage.TabIndex = 2;
             tyokaluListaTabPage.Text = "Työkalulista";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(684, 33);
+            button1.Name = "button1";
+            button1.Size = new Size(244, 76);
+            button1.TabIndex = 10;
+            button1.Text = "Muokkaa";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(549, 201);
+            label13.Location = new Point(396, 242);
             label13.Name = "label13";
             label13.Size = new Size(192, 25);
             label13.TabIndex = 9;
@@ -103,7 +114,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(549, 129);
+            label12.Location = new Point(396, 168);
             label12.Name = "label12";
             label12.Size = new Size(125, 25);
             label12.TabIndex = 8;
@@ -111,22 +122,22 @@
             // 
             // tyokaluKorvausText
             // 
-            tyokaluKorvausText.Location = new Point(549, 229);
+            tyokaluKorvausText.Location = new Point(396, 270);
             tyokaluKorvausText.Name = "tyokaluKorvausText";
-            tyokaluKorvausText.Size = new Size(192, 31);
+            tyokaluKorvausText.Size = new Size(244, 31);
             tyokaluKorvausText.TabIndex = 7;
             // 
             // tyokaluNimiText
             // 
-            tyokaluNimiText.Location = new Point(549, 157);
+            tyokaluNimiText.Location = new Point(396, 196);
             tyokaluNimiText.Name = "tyokaluNimiText";
-            tyokaluNimiText.Size = new Size(192, 31);
+            tyokaluNimiText.Size = new Size(244, 31);
             tyokaluNimiText.TabIndex = 6;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(549, 92);
+            label9.Location = new Point(396, 131);
             label9.Name = "label9";
             label9.Size = new Size(219, 25);
             label9.TabIndex = 5;
@@ -134,11 +145,12 @@
             // 
             // replacementValueTextBox
             // 
-            replacementValueTextBox.Location = new Point(329, 33);
+            replacementValueTextBox.Enabled = false;
+            replacementValueTextBox.Location = new Point(396, 33);
             replacementValueTextBox.Multiline = true;
             replacementValueTextBox.Name = "replacementValueTextBox";
             replacementValueTextBox.ReadOnly = true;
-            replacementValueTextBox.Size = new Size(192, 84);
+            replacementValueTextBox.Size = new Size(244, 84);
             replacementValueTextBox.TabIndex = 4;
             // 
             // label8
@@ -152,9 +164,9 @@
             // 
             // poistaTyokaluButton
             // 
-            poistaTyokaluButton.Location = new Point(738, 33);
+            poistaTyokaluButton.Location = new Point(396, 426);
             poistaTyokaluButton.Name = "poistaTyokaluButton";
-            poistaTyokaluButton.Size = new Size(145, 37);
+            poistaTyokaluButton.Size = new Size(244, 76);
             poistaTyokaluButton.TabIndex = 2;
             poistaTyokaluButton.Text = "Poista työkalu -";
             poistaTyokaluButton.UseVisualStyleBackColor = true;
@@ -162,9 +174,9 @@
             // 
             // lisaaTyokaluButton
             // 
-            lisaaTyokaluButton.Location = new Point(549, 33);
+            lisaaTyokaluButton.Location = new Point(396, 321);
             lisaaTyokaluButton.Name = "lisaaTyokaluButton";
-            lisaaTyokaluButton.Size = new Size(145, 37);
+            lisaaTyokaluButton.Size = new Size(244, 76);
             lisaaTyokaluButton.TabIndex = 1;
             lisaaTyokaluButton.Text = "Lisää työkalu +";
             lisaaTyokaluButton.UseVisualStyleBackColor = true;
@@ -177,7 +189,7 @@
             varastoListbox.ItemHeight = 25;
             varastoListbox.Location = new Point(8, 33);
             varastoListbox.Name = "varastoListbox";
-            varastoListbox.Size = new Size(289, 504);
+            varastoListbox.Size = new Size(364, 904);
             varastoListbox.TabIndex = 0;
             varastoListbox.SelectedIndexChanged += varastoListbox_SelectedIndexChanged;
             // 
@@ -198,7 +210,7 @@
             palautusTabPage.Location = new Point(4, 37);
             palautusTabPage.Name = "palautusTabPage";
             palautusTabPage.Padding = new Padding(3);
-            palautusTabPage.Size = new Size(906, 559);
+            palautusTabPage.Size = new Size(1894, 992);
             palautusTabPage.TabIndex = 1;
             palautusTabPage.Text = "Palautus";
             // 
@@ -215,22 +227,22 @@
             // 
             textBoxSearch.Location = new Point(9, 37);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(227, 31);
+            textBoxSearch.Size = new Size(350, 31);
             textBoxSearch.TabIndex = 9;
             textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // korvaushintaLabel
             // 
             korvaushintaLabel.ForeColor = Color.Red;
-            korvaushintaLabel.Location = new Point(616, 398);
+            korvaushintaLabel.Location = new Point(1005, 673);
             korvaushintaLabel.Name = "korvaushintaLabel";
-            korvaushintaLabel.Size = new Size(251, 73);
+            korvaushintaLabel.Size = new Size(350, 77);
             korvaushintaLabel.TabIndex = 8;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(616, 9);
+            label11.Location = new Point(1005, 84);
             label11.Name = "label11";
             label11.Size = new Size(154, 25);
             label11.TabIndex = 7;
@@ -239,7 +251,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(281, 9);
+            label10.Location = new Point(503, 84);
             label10.Name = "label10";
             label10.Size = new Size(147, 25);
             label10.TabIndex = 6;
@@ -248,11 +260,11 @@
             // palautusTiedotTextBox
             // 
             palautusTiedotTextBox.Enabled = false;
-            palautusTiedotTextBox.Location = new Point(616, 37);
+            palautusTiedotTextBox.Location = new Point(1005, 112);
             palautusTiedotTextBox.Multiline = true;
             palautusTiedotTextBox.Name = "palautusTiedotTextBox";
             palautusTiedotTextBox.ReadOnly = true;
-            palautusTiedotTextBox.Size = new Size(251, 358);
+            palautusTiedotTextBox.Size = new Size(350, 544);
             palautusTiedotTextBox.TabIndex = 5;
             // 
             // palautusListbox
@@ -261,23 +273,23 @@
             palautusListbox.ItemHeight = 25;
             palautusListbox.Location = new Point(9, 112);
             palautusListbox.Name = "palautusListbox";
-            palautusListbox.Size = new Size(227, 429);
+            palautusListbox.Size = new Size(350, 804);
             palautusListbox.TabIndex = 4;
             palautusListbox.SelectedIndexChanged += palautusListbox_SelectedIndexChanged;
             // 
             // palautusTyokalutListbox
             // 
             palautusTyokalutListbox.FormattingEnabled = true;
-            palautusTyokalutListbox.Location = new Point(281, 37);
+            palautusTyokalutListbox.Location = new Point(503, 112);
             palautusTyokalutListbox.Name = "palautusTyokalutListbox";
-            palautusTyokalutListbox.Size = new Size(293, 498);
+            palautusTyokalutListbox.Size = new Size(350, 810);
             palautusTyokalutListbox.TabIndex = 3;
             // 
             // palautaButton
             // 
-            palautaButton.Location = new Point(616, 474);
+            palautaButton.Location = new Point(1005, 795);
             palautaButton.Name = "palautaButton";
-            palautaButton.Size = new Size(251, 61);
+            palautaButton.Size = new Size(350, 121);
             palautaButton.TabIndex = 2;
             palautaButton.Text = "PALAUTA";
             palautaButton.UseVisualStyleBackColor = true;
@@ -310,7 +322,7 @@
             varausTabPage.Location = new Point(4, 37);
             varausTabPage.Name = "varausTabPage";
             varausTabPage.Padding = new Padding(3);
-            varausTabPage.Size = new Size(906, 559);
+            varausTabPage.Size = new Size(1894, 992);
             varausTabPage.TabIndex = 0;
             varausTabPage.Text = "Varaus";
             // 
@@ -318,7 +330,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(315, 6);
+            label1.Location = new Point(380, 31);
             label1.Name = "label1";
             label1.Size = new Size(127, 25);
             label1.TabIndex = 5;
@@ -327,7 +339,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(8, 6);
+            label6.Location = new Point(7, 31);
             label6.Name = "label6";
             label6.Size = new Size(137, 25);
             label6.TabIndex = 11;
@@ -337,7 +349,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(315, 216);
+            label4.Location = new Point(385, 233);
             label4.Name = "label4";
             label4.Size = new Size(122, 25);
             label4.TabIndex = 10;
@@ -346,22 +358,22 @@
             // varausMuutaTietoa_textBox
             // 
             varausMuutaTietoa_textBox.BorderStyle = BorderStyle.FixedSingle;
-            varausMuutaTietoa_textBox.Location = new Point(315, 244);
+            varausMuutaTietoa_textBox.Location = new Point(385, 261);
             varausMuutaTietoa_textBox.Multiline = true;
             varausMuutaTietoa_textBox.Name = "varausMuutaTietoa_textBox";
-            varausMuutaTietoa_textBox.Size = new Size(313, 288);
+            varausMuutaTietoa_textBox.Size = new Size(340, 416);
             varausMuutaTietoa_textBox.TabIndex = 9;
             // 
             // lainaajanNimi_textBox
             // 
-            lainaajanNimi_textBox.Location = new Point(315, 34);
+            lainaajanNimi_textBox.Location = new Point(385, 59);
             lainaajanNimi_textBox.Name = "lainaajanNimi_textBox";
             lainaajanNimi_textBox.Size = new Size(313, 31);
             lainaajanNimi_textBox.TabIndex = 4;
             // 
             // opettajanNimi_textBox
             // 
-            opettajanNimi_textBox.Location = new Point(315, 96);
+            opettajanNimi_textBox.Location = new Point(385, 121);
             opettajanNimi_textBox.Name = "opettajanNimi_textBox";
             opettajanNimi_textBox.Size = new Size(313, 31);
             opettajanNimi_textBox.TabIndex = 3;
@@ -370,7 +382,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(315, 140);
+            label3.Location = new Point(380, 155);
             label3.Name = "label3";
             label3.Size = new Size(105, 25);
             label3.TabIndex = 8;
@@ -378,7 +390,7 @@
             // 
             // varaus_dateTimePicker
             // 
-            varaus_dateTimePicker.Location = new Point(315, 168);
+            varaus_dateTimePicker.Location = new Point(385, 183);
             varaus_dateTimePicker.Name = "varaus_dateTimePicker";
             varaus_dateTimePicker.Size = new Size(313, 31);
             varaus_dateTimePicker.TabIndex = 7;
@@ -387,7 +399,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(315, 68);
+            label2.Location = new Point(380, 93);
             label2.Name = "label2";
             label2.Size = new Size(133, 25);
             label2.TabIndex = 6;
@@ -395,9 +407,9 @@
             // 
             // lahetaVaraus_btn
             // 
-            lahetaVaraus_btn.Location = new Point(664, 474);
+            lahetaVaraus_btn.Location = new Point(385, 729);
             lahetaVaraus_btn.Name = "lahetaVaraus_btn";
-            lahetaVaraus_btn.Size = new Size(211, 58);
+            lahetaVaraus_btn.Size = new Size(340, 108);
             lahetaVaraus_btn.TabIndex = 1;
             lahetaVaraus_btn.Text = "LÄHETÄ";
             lahetaVaraus_btn.UseVisualStyleBackColor = true;
@@ -408,9 +420,9 @@
             varaaTyokalut_listbox.CheckOnClick = true;
             varaaTyokalut_listbox.FormattingEnabled = true;
             varaaTyokalut_listbox.HorizontalScrollbar = true;
-            varaaTyokalut_listbox.Location = new Point(3, 33);
+            varaaTyokalut_listbox.Location = new Point(3, 59);
             varaaTyokalut_listbox.Name = "varaaTyokalut_listbox";
-            varaaTyokalut_listbox.Size = new Size(295, 498);
+            varaaTyokalut_listbox.Size = new Size(335, 888);
             varaaTyokalut_listbox.TabIndex = 0;
             varaaTyokalut_listbox.SelectedIndexChanged += varaaTyokalut_listbox_SelectedIndexChanged;
             // 
@@ -425,14 +437,14 @@
             tabControl.Location = new Point(0, 0);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(914, 600);
+            tabControl.Size = new Size(1902, 1033);
             tabControl.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1902, 1033);
             Controls.Add(tabControl);
             Margin = new Padding(3, 4, 3, 4);
             MinimumSize = new Size(932, 647);
@@ -490,5 +502,6 @@
         private Label label13;
         private Label label12;
         private TextBox tyokaluNimiText;
+        private Button button1;
     }
 }
