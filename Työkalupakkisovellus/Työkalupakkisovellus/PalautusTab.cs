@@ -36,8 +36,8 @@ namespace Työkalupakkisovellus
                 return;
             }
 
-            string bookingId = _palautusListBox.SelectedItem.ToString(); 
-
+            string studentName = _palautusListBox.SelectedItem.ToString();
+            //BsonDocument bookingDetails = _borrowingInfo.GetBookingDetails(studentName);
             
             decimal replacementCost = CalculateReplacementCosts();
             string costMessage = replacementCost > 0 ? $"\n\nHUOM! kaikkia työkaluja ei valittu. Korvaushinta puuttuville työkaluille: €{replacementCost:N2}." : "";
@@ -47,7 +47,7 @@ namespace Työkalupakkisovellus
 
             if (result == DialogResult.Yes)
             {
-                _borrowingInfo.RemoveBooking(bookingId);
+                _borrowingInfo.RemoveBookingName(studentName);
                 _palautusListBox.Items.Remove(_palautusListBox.SelectedItem);
                 _palautusTyokalutListbox.Items.Clear();
                 _korvaushintaLabel.Text = "";

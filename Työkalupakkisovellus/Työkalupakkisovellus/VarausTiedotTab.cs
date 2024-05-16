@@ -39,17 +39,20 @@ namespace Työkalupakkisovellus
             return _activeBookingsCollection.Find(filter).FirstOrDefault();
         }
 
+
         public List<string> GetBookingName()
         {
             var bookings = _activeBookingsCollection.Find(new BsonDocument()).ToList();
             return bookings.Select(b => b["studentName"].AsString).ToList();
         }
 
-        public void RemoveBooking(string bookingId)
+
+        public void RemoveBookingName(string studentName)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", new ObjectId(bookingId)); // _id
+            var filter = Builders<BsonDocument>.Filter.Eq("studentName", studentName);
             _activeBookingsCollection.DeleteOne(filter);
         }
+
 
         public List<string> GetBorrowedToolsForBooking(string bookingId)
         {
@@ -65,6 +68,7 @@ namespace Työkalupakkisovellus
 
             return new List<string>();
         }
+
 
         public decimal GetToolReplacementCost(string toolName)
         {

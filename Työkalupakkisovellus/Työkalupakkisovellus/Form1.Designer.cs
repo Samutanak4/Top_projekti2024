@@ -9,7 +9,7 @@
 
         /// <summary>
         ///  Clean up any resources being used.
-        /// </summary>
+        /// </summary>§
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
@@ -64,6 +64,8 @@
             lahetaVaraus_btn = new Button();
             varaaTyokalut_listbox = new CheckedListBox();
             tabControl = new TabControl();
+            label14 = new Label();
+            palautus_dateTimePicker = new DateTimePicker();
             tyokaluListaTabPage.SuspendLayout();
             palautusTabPage.SuspendLayout();
             varausTabPage.SuspendLayout();
@@ -308,6 +310,8 @@
             // 
             varausTabPage.BackColor = Color.Gainsboro;
             varausTabPage.BorderStyle = BorderStyle.FixedSingle;
+            varausTabPage.Controls.Add(palautus_dateTimePicker);
+            varausTabPage.Controls.Add(label14);
             varausTabPage.Controls.Add(label1);
             varausTabPage.Controls.Add(label6);
             varausTabPage.Controls.Add(label4);
@@ -349,7 +353,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
-            label4.Location = new Point(385, 233);
+            label4.Location = new Point(385, 307);
             label4.Name = "label4";
             label4.Size = new Size(122, 25);
             label4.TabIndex = 10;
@@ -358,7 +362,7 @@
             // varausMuutaTietoa_textBox
             // 
             varausMuutaTietoa_textBox.BorderStyle = BorderStyle.FixedSingle;
-            varausMuutaTietoa_textBox.Location = new Point(385, 261);
+            varausMuutaTietoa_textBox.Location = new Point(385, 335);
             varausMuutaTietoa_textBox.Multiline = true;
             varausMuutaTietoa_textBox.Name = "varausMuutaTietoa_textBox";
             varausMuutaTietoa_textBox.Size = new Size(340, 416);
@@ -368,21 +372,21 @@
             // 
             lainaajanNimi_textBox.Location = new Point(385, 59);
             lainaajanNimi_textBox.Name = "lainaajanNimi_textBox";
-            lainaajanNimi_textBox.Size = new Size(313, 31);
+            lainaajanNimi_textBox.Size = new Size(340, 31);
             lainaajanNimi_textBox.TabIndex = 4;
             // 
             // opettajanNimi_textBox
             // 
             opettajanNimi_textBox.Location = new Point(385, 121);
             opettajanNimi_textBox.Name = "opettajanNimi_textBox";
-            opettajanNimi_textBox.Size = new Size(313, 31);
+            opettajanNimi_textBox.Size = new Size(340, 31);
             opettajanNimi_textBox.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(380, 155);
+            label3.Location = new Point(380, 164);
             label3.Name = "label3";
             label3.Size = new Size(105, 25);
             label3.TabIndex = 8;
@@ -390,9 +394,9 @@
             // 
             // varaus_dateTimePicker
             // 
-            varaus_dateTimePicker.Location = new Point(385, 183);
+            varaus_dateTimePicker.Location = new Point(385, 192);
             varaus_dateTimePicker.Name = "varaus_dateTimePicker";
-            varaus_dateTimePicker.Size = new Size(313, 31);
+            varaus_dateTimePicker.Size = new Size(340, 31);
             varaus_dateTimePicker.TabIndex = 7;
             // 
             // label2
@@ -407,7 +411,7 @@
             // 
             // lahetaVaraus_btn
             // 
-            lahetaVaraus_btn.Location = new Point(385, 729);
+            lahetaVaraus_btn.Location = new Point(385, 839);
             lahetaVaraus_btn.Name = "lahetaVaraus_btn";
             lahetaVaraus_btn.Size = new Size(340, 108);
             lahetaVaraus_btn.TabIndex = 1;
@@ -439,6 +443,22 @@
             tabControl.SelectedIndex = 0;
             tabControl.Size = new Size(1902, 1033);
             tabControl.TabIndex = 0;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(380, 235);
+            label14.Name = "label14";
+            label14.Size = new Size(252, 25);
+            label14.TabIndex = 12;
+            label14.Text = "Odotettu palautuspäivämäärä:";
+            // 
+            // palautus_dateTimePicker
+            // 
+            palautus_dateTimePicker.Location = new Point(385, 263);
+            palautus_dateTimePicker.Name = "palautus_dateTimePicker";
+            palautus_dateTimePicker.Size = new Size(340, 31);
+            palautus_dateTimePicker.TabIndex = 13;
             // 
             // Form1
             // 
@@ -503,5 +523,7 @@
         private Label label12;
         private TextBox tyokaluNimiText;
         private Button button1;
+        private DateTimePicker palautus_dateTimePicker;
+        private Label label14;
     }
 }
