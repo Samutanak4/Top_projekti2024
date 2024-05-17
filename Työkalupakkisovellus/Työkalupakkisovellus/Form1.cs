@@ -84,8 +84,10 @@ namespace Työkalupakkisovellus
             }
 
             string studentName = lainaajanNimi_textBox.Text;
+            string groupId = tunnus_textBox.Text;
             string teacherName = opettajanNimi_textBox.Text;
             DateTime dateTime = varaus_dateTimePicker.Value;
+            DateTime returnDate = palautus_dateTimePicker.Value;
             string additionalInfo = varausMuutaTietoa_textBox.Text;
 
             if (varaaTyokalut_listbox.CheckedItems.Count == 0)
@@ -100,7 +102,7 @@ namespace Työkalupakkisovellus
                 checkedTools.Add(checkedItem.ToString());
             }
 
-            _borrowingInfo.SendBookingInfo(studentName, teacherName, dateTime, additionalInfo, checkedTools);
+            _borrowingInfo.SendBookingInfo(studentName, groupId, teacherName, dateTime, returnDate, additionalInfo, checkedTools);
             //aktiivisetVarauksetListBox.Items.Add(studentName); Varaussivu / Ei käytössä
             palautusListbox.Items.Add(studentName);
 
@@ -132,8 +134,10 @@ namespace Työkalupakkisovellus
         private void ClearFields()
         {
             lainaajanNimi_textBox.Text = "";
+            tunnus_textBox.Text = "";
             opettajanNimi_textBox.Text = "";
             varaus_dateTimePicker.Value = DateTime.Now;
+            palautus_dateTimePicker.Value = DateTime.Now;
             varausMuutaTietoa_textBox.Text = "";
 
             foreach (int index in varaaTyokalut_listbox.CheckedIndices)
@@ -170,12 +174,16 @@ namespace Työkalupakkisovellus
 
                     string teacherName = bookingDetails["teacherName"].AsString;
                     string studentName = bookingDetails["studentName"].AsString;
+                    string groupId = bookingDetails["groupId"].AsString;
                     string date = bookingDetails["dateTime"].ToUniversalTime().ToString("dd-MM-yyyy");
+                    string returnDate = bookingDetails["returnDate"].ToUniversalTime().ToString("dd-MM-yyyy");
                     string additionalInfo = bookingDetails["additionalInfo"].AsString;
 
                     string fullInfo = $"Opettajan nimi: {teacherName}\r\n" +
                                       $"Lainaajan nimi: {studentName}\r\n" +
+                                      $"Ryhmätunnus: {groupId}\r\n" +
                                       $"Päiväys: {date}\r\n" +
+                                      $"Palautuspäivämäärä: {returnDate}\r\n" +
                                       $"Muuta tietoa: {additionalInfo}";
 
                     palautusTiedotTextBox.Text = fullInfo;
