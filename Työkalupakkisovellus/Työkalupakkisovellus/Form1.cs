@@ -77,10 +77,13 @@ namespace Työkalupakkisovellus
         {
             if (string.IsNullOrWhiteSpace(lainaajanNimi_textBox.Text) ||
                 string.IsNullOrWhiteSpace(opettajanNimi_textBox.Text) ||
-                varaus_dateTimePicker.Value == DateTime.MinValue)
+                varaus_dateTimePicker.Value == DateTime.MinValue ||
+                palautus_dateTimePicker.Value == DateTime.MinValue
+                )
+
             {
-                    MessageBox.Show("Kaikkia tietoja ei ole täytetty. (Lainaajan nimi, opettajan nimi, päivämäärä).", "Virhe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; 
+                MessageBox.Show("Kaikkia tietoja ei ole täytetty. (Lainaajan nimi, opettajan nimi, päivämäärä).", "Virhe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             string studentName = lainaajanNimi_textBox.Text;
@@ -93,7 +96,7 @@ namespace Työkalupakkisovellus
             if (varaaTyokalut_listbox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Valitse ainakin yksi työkalu", "Virhe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
+                return;
             }
 
             List<string> checkedTools = new List<string>();
@@ -207,13 +210,17 @@ namespace Työkalupakkisovellus
             _returnInfo.palautusButton_Click(sender, e);
         }
 
-        
+
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             FilterListBoxItems(textBoxSearch.Text);
 
         }
+
+        
+
+
 
         private void FilterListBoxItems(string searchText)
         {
@@ -228,6 +235,18 @@ namespace Työkalupakkisovellus
                     palautusListbox.Items.Add(name);
                 }
             }
+        }
+
+        private void FilterListBoxGroupId(string groupId)
+        {
+            var bookings = _borrowingInfo.GetBookingName();
+            var groupIds = _borrowingInfo.GetBookingGroupId();
+
+            palautusListbox.Items.Clear();
+
+            
+
+
         }
 
         private void varastoListbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,14 +264,14 @@ namespace Työkalupakkisovellus
             if (varastoListbox.SelectedItem != null)
             {
                 string selectedTool = varastoListbox.SelectedItem.ToString();
-                
+
                 DialogResult result = MessageBox.Show($"Haluatko varmasti poistaa työkalun: {selectedTool}?", "Varmista poistaminen", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
                     _toolsInfo.RemoveTool(selectedTool);
-                    RefreshListBoxes(); 
-                     
+                    RefreshListBoxes();
+
                     MessageBox.Show($"{selectedTool} on poistettu käytöstä.", "Työkalu poistettu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -276,7 +295,7 @@ namespace Työkalupakkisovellus
             _toolsInfo.AddTool(toolName, replacementCost);
 
             RefreshListBoxes();
-            
+
             tyokaluNimiText.Clear();
             tyokaluKorvausText.Clear();
         }
@@ -294,22 +313,22 @@ namespace Työkalupakkisovellus
 
         private void RefreshListBoxes()
         {
-            
+
             varastoListbox.Items.Clear();
-            var tools = _toolsInfo.GetAllTools();  
+            var tools = _toolsInfo.GetAllTools();
             foreach (var tool in tools)
             {
                 varastoListbox.Items.Add(tool);
             }
 
-            
+
             varaaTyokalut_listbox.Items.Clear();
             foreach (var tool in tools)
             {
-                varaaTyokalut_listbox.Items.Add(tool, CheckState.Checked);  
+                varaaTyokalut_listbox.Items.Add(tool, CheckState.Checked);
             }
         }
-        
 
+        
     }
 }

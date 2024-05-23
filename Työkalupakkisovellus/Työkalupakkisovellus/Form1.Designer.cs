@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             tyokaluListaTabPage = new TabPage();
-            button1 = new Button();
             label13 = new Label();
             label12 = new Label();
             tyokaluKorvausText = new TextBox();
@@ -52,6 +51,8 @@
             palautaButton = new Button();
             label7 = new Label();
             varausTabPage = new TabPage();
+            label15 = new Label();
+            tunnus_textBox = new TextBox();
             palautus_dateTimePicker = new DateTimePicker();
             label14 = new Label();
             label1 = new Label();
@@ -66,8 +67,6 @@
             lahetaVaraus_btn = new Button();
             varaaTyokalut_listbox = new CheckedListBox();
             tabControl = new TabControl();
-            tunnus_textBox = new TextBox();
-            label15 = new Label();
             tyokaluListaTabPage.SuspendLayout();
             palautusTabPage.SuspendLayout();
             varausTabPage.SuspendLayout();
@@ -78,7 +77,6 @@
             // 
             tyokaluListaTabPage.BackColor = Color.Gainsboro;
             tyokaluListaTabPage.BorderStyle = BorderStyle.FixedSingle;
-            tyokaluListaTabPage.Controls.Add(button1);
             tyokaluListaTabPage.Controls.Add(label13);
             tyokaluListaTabPage.Controls.Add(label12);
             tyokaluListaTabPage.Controls.Add(tyokaluKorvausText);
@@ -96,15 +94,6 @@
             tyokaluListaTabPage.Size = new Size(1894, 992);
             tyokaluListaTabPage.TabIndex = 2;
             tyokaluListaTabPage.Text = "Työkalulista";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(680, 76);
-            button1.Name = "button1";
-            button1.Size = new Size(244, 41);
-            button1.TabIndex = 10;
-            button1.Text = "Muokkaa";
-            button1.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -225,7 +214,7 @@
             label5.Name = "label5";
             label5.Size = new Size(182, 25);
             label5.TabIndex = 10;
-            label5.Text = "Hae lainausta nimellä:";
+            label5.Text = "Hae lainausta nimellä;";
             // 
             // textBoxSearch
             // 
@@ -274,6 +263,7 @@
             // palautusListbox
             // 
             palautusListbox.FormattingEnabled = true;
+            palautusListbox.HorizontalScrollbar = true;
             palautusListbox.ItemHeight = 25;
             palautusListbox.Location = new Point(9, 112);
             palautusListbox.Name = "palautusListbox";
@@ -284,6 +274,7 @@
             // palautusTyokalutListbox
             // 
             palautusTyokalutListbox.FormattingEnabled = true;
+            palautusTyokalutListbox.HorizontalScrollbar = true;
             palautusTyokalutListbox.Location = new Point(503, 112);
             palautusTyokalutListbox.Name = "palautusTyokalutListbox";
             palautusTyokalutListbox.Size = new Size(350, 810);
@@ -333,6 +324,22 @@
             varausTabPage.Size = new Size(1894, 992);
             varausTabPage.TabIndex = 0;
             varausTabPage.Text = "Varaus";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(380, 103);
+            label15.Name = "label15";
+            label15.Size = new Size(125, 25);
+            label15.TabIndex = 15;
+            label15.Text = "Ryhmätunnus:";
+            // 
+            // tunnus_textBox
+            // 
+            tunnus_textBox.Location = new Point(385, 131);
+            tunnus_textBox.Name = "tunnus_textBox";
+            tunnus_textBox.Size = new Size(340, 31);
+            tunnus_textBox.TabIndex = 14;
             // 
             // palautus_dateTimePicker
             // 
@@ -464,22 +471,6 @@
             tabControl.Size = new Size(1902, 1033);
             tabControl.TabIndex = 0;
             // 
-            // tunnus_textBox
-            // 
-            tunnus_textBox.Location = new Point(385, 131);
-            tunnus_textBox.Name = "tunnus_textBox";
-            tunnus_textBox.Size = new Size(340, 31);
-            tunnus_textBox.TabIndex = 14;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(380, 103);
-            label15.Name = "label15";
-            label15.Size = new Size(125, 25);
-            label15.TabIndex = 15;
-            label15.Text = "Ryhmätunnus:";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -542,7 +533,6 @@
         private Label label13;
         private Label label12;
         private TextBox tyokaluNimiText;
-        private Button button1;
         private DateTimePicker palautus_dateTimePicker;
         private Label label14;
         private Label label15;

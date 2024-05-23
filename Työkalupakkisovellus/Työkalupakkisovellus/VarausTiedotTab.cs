@@ -48,6 +48,12 @@ namespace Työkalupakkisovellus
             return bookings.Select(b => b["studentName"].AsString).ToList();
         }
 
+        public List<string> GetBookingGroupId()
+        {
+            var booking = _activeBookingsCollection.Find(new BsonDocument()).ToList();
+            return booking.Select(b => b["GroupId"].AsString).ToList();
+        }
+
 
         public void RemoveBookingName(string studentName)
         {
@@ -85,5 +91,12 @@ namespace Työkalupakkisovellus
 
             return 0;  
         }
+
+        public List<BsonDocument> GetBookingFull()
+        {
+            return _activeBookingsCollection.Find(new BsonDocument()).ToList();
+        }
+
+
     }
 }
