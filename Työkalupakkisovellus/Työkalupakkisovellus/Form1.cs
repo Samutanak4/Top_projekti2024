@@ -4,9 +4,8 @@ using System.Windows.Forms;
 
 namespace Työkalupakkisovellus
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-
         private VarausTiedotTab _borrowingInfo;
         private PalautusTab _returnInfo;
         private TyokalulistaTab _toolsInfo;
@@ -14,8 +13,7 @@ namespace Työkalupakkisovellus
         private IMongoCollection<BsonDocument> _toolsCollection;
         private IMongoCollection<BsonDocument> _activeBookings;
 
-
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
 
@@ -35,11 +33,14 @@ namespace Työkalupakkisovellus
             _toolsInfo = new TyokalulistaTab("mongodb://localhost:27017/", "TyokaluDB", "Tools");
         }
 
-
         private void FillCheckedListBoxTools()
         {
             var filter = Builders<BsonDocument>.Filter.Empty;
+
             var show = Builders<BsonDocument>.Projection.Include("displayName");
+
+
+            
 
             var tools = _toolsCollection.Find(filter).Project(show).ToList();
 
@@ -52,6 +53,7 @@ namespace Työkalupakkisovellus
 
 
         }
+
 
         private void TickCheckedListBox()
         {
@@ -66,11 +68,10 @@ namespace Työkalupakkisovellus
             }
         }
 
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
-
         }
 
         private void lahetaVaraus_btn_Click(object sender, EventArgs e)
@@ -89,9 +90,13 @@ namespace Työkalupakkisovellus
             string studentName = lainaajanNimi_textBox.Text;
             string groupId = tunnus_textBox.Text;
             string teacherName = opettajanNimi_textBox.Text;
+
             DateTime dateTime = varaus_dateTimePicker.Value;
             DateTime returnDate = palautus_dateTimePicker.Value;
+
+
             string additionalInfo = varausMuutaTietoa_textBox.Text;
+            DateTime dateTime = varaus_dateTimePicker.Value;
 
             if (varaaTyokalut_listbox.CheckedItems.Count == 0)
             {
@@ -117,6 +122,7 @@ namespace Työkalupakkisovellus
 
 
 
+
         private void UpdateOngoingBookingListBox()
         {
             var filter = Builders<BsonDocument>.Filter.Empty;
@@ -132,16 +138,22 @@ namespace Työkalupakkisovellus
             }
 
 
+
+        private void UpdateOngoingBorrowListBox()
+        {
+
         }
 
         private void ClearFields()
         {
+
             lainaajanNimi_textBox.Text = "";
             tunnus_textBox.Text = "";
             opettajanNimi_textBox.Text = "";
             varaus_dateTimePicker.Value = DateTime.Now;
             palautus_dateTimePicker.Value = DateTime.Now;
             varausMuutaTietoa_textBox.Text = "";
+
 
             foreach (int index in varaaTyokalut_listbox.CheckedIndices)
             {
@@ -151,7 +163,6 @@ namespace Työkalupakkisovellus
 
         private void varaaTyokalut_listbox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void palautusListbox_SelectedIndexChanged(object sender, EventArgs e)

@@ -20,8 +20,10 @@ namespace Työkalupakkisovellus
             _toolsCollection = database.GetCollection<BsonDocument>("Tools");
         }
 
+
         public void SendBookingInfo(string studentName, string groupId, string teacherName, DateTime dateTime, DateTime returnDate, string additionalInfo, IEnumerable<string> checkedTools)
         {           
+
             var document = new BsonDocument
             {
                 { "studentName", studentName },
@@ -31,7 +33,8 @@ namespace Työkalupakkisovellus
                 { "returnDate", returnDate },
                 { "additionalInfo", additionalInfo },
                 { "checkedTools", new BsonArray(checkedTools) }
-            };          
+            };
+
             _activeBookingsCollection.InsertOne(document);
         }
 

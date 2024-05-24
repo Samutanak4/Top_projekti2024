@@ -14,11 +14,9 @@ namespace Työkalupakkisovellus
 
         public ApiClient(string baseUrl)
         {
-            
             _httpClient = new HttpClient();
             _baseUrl = baseUrl; 
         }
-
 
         public async Task CreateUserAsync(string username, string password)
         {
@@ -29,7 +27,6 @@ namespace Työkalupakkisovellus
 
             string apiUrl = $"{_baseUrl}/users/{username}";
             HttpResponseMessage response = await _httpClient.PutAsync(apiUrl, requestContent);
-
             response.EnsureSuccessStatusCode();
         }
     }
