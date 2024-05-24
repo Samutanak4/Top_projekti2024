@@ -3,8 +3,10 @@
 ## Varaus
 - *Valitse Työkalut* - lista työkaluista, joita voi valita varaukseen
 - *Lainaajan nimi* - opiskelijan nimi, joka pyytää varausta
+- *Ryhmätunnus* - oppilaan ryhmätunnus, eli mihin ryhmään oppilas kuuluu
 - *Opettajan nimi* - opettajan nimi, joka laatii varauksen
 - *Päivämäärä* - minä päivänä varaus lähetettiin
+- *Palautuspäivämäärä* - milloin lainaus tulee palauttaa
 - *Muuta tietoa* - vapaata lisätekstiä varauksen tietoihin
 - *LÄHETÄ* - tee varaus
 
